@@ -1,5 +1,6 @@
 DJANGO_SECRET_KEY=django-insecure-@ac@48q%k=kc20hjz_qz$-rgg7dyitct+9ls96iu@h)9^!ax-@
 DJANGO_DEBUG=0
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
 
 DB_HOST=db
 DB_PORT=5432
