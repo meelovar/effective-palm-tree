@@ -7,6 +7,7 @@
 ```shell
 docker compose build
 docker compose up -d
+docker compose exec web python3 manage.py migrate
 ```
 
 Сервер будет доступен по адресу `localhost:8000`
