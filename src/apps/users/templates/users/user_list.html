@@ -1,0 +1,18 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Name</th>
+    </tr>
+    {% for u in object_list %}
+      <tr>
+        <td><a href="{% url "user_detail" u.pk %}">{{ u.id }}</a></td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.first_name }} {{ u.last_name }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

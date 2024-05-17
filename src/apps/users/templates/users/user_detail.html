@@ -1,0 +1,9 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+  <p><b>ID:</b> {{ object.pk }}</p>
+  <p><b>Email:</b> {{ object.email }}</p>
+  <p><b>First name:</b> {{ object.first_name }}</p>
+  <p><b>Last name:</b> {{ object.last_name }}</p>
+  <p><b>Date joined:</b> {{ object.date_joined|date }}</p>
+{% endblock %}

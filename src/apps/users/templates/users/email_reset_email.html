@@ -1,0 +1,4 @@
+{% autoescape off %}
+Please go to the following page and choose a new email:
+{{ protocol }}://{{ domain }}{% url "email_reset_confirm" uidb64=uid token=token %}
+{% endautoescape %}

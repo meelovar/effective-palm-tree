@@ -1,0 +1,4 @@
+{% autoescape off %}
+Please go to the following page and confirm email:
+{{ protocol }}://{{ domain }}{% url "register_confirm" uidb64=uid token=token %}
+{% endautoescape %}

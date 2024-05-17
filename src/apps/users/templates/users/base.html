@@ -1,0 +1,26 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<header>
+  <a href="{% url "user_list" %}">User list</a>
+  {% if user.is_authenticated %}
+    <a href="{% url "user_change" %}">My profile</a>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit">logout</button>
+    </form>
+  {% else %}
+    <a href="{% url "register" %}">Register</a>
+    <a href="{% url "login" %}">Login</a>
+  {% endif %}
+</header>
+{% block content %}
+{% endblock %}
+</body>
+</html>
+{% endspaceless %}

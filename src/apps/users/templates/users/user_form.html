@@ -1,0 +1,13 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+  <p><b>ID:</b> {{ object.pk }}</p>
+  <p><b>Email:</b> {{ object.email }}</p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update profile">
+  </form>
+  <a href="{% url "password_change" %}">Change password</a>
+  <a href="{% url "email_reset" %}">Change email</a>
+{% endblock %}
