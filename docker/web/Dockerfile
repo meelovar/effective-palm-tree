@@ -34,6 +34,8 @@ COPY --from=builder --chown=$USER_NAME:$USER_NAME $VIRTUAL_ENV_PATH $VIRTUAL_ENV
 COPY --chown=$USER_NAME:$USER_NAME --chmod=744 docker/web/entrypoint.sh $VIRTUAL_ENV_PATH/bin
 COPY --chown=$USER_NAME:$USER_NAME src ./
 
+RUN install -d static
+
 EXPOSE 8000
 
 ENTRYPOINT ["entrypoint.sh"]
