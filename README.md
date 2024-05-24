@@ -8,6 +8,7 @@
 docker compose build
 docker compose up -d
 docker compose exec web python3 manage.py migrate
+docker compose exec web python3 manage.py collectstatic --no-input
 ```
 
 Сервер будет доступен по адресу `localhost:8000`
